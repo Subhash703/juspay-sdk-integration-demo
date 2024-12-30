@@ -4,7 +4,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <GlobalJuspayPaymentsSDK/GlobalJuspayPaymentsSDK.h> // Importing GlobalJuspayPaymentsSDK
+// block:start:import-global-juspay-sdk
+#import <GlobalJuspayPaymentsSDK/GlobalJuspayPaymentsSDK.h>
+// block:end:import-global-juspay-sdk
 
 @interface ViewController : UIViewController
 
