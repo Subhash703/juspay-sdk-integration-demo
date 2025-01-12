@@ -1,5 +1,4 @@
-curl --location --request POST 'https://smartgateway.hdfcbank.com/orders' \
---header 'version: 2023-06-30' \
+curl --location --request POST 'https://smartgatewayuat.hdfcbank.com/orders' \
 --header 'Content-Type: application/x-www-form-urlencoded' \
 --header 'x-merchantid: merchant_id'\
 --header 'x-routing-id: customer_id'\
@@ -13,7 +12,7 @@ curl --location --request POST 'https://smartgateway.hdfcbank.com/orders' \
 --data-urlencode 'product_id=prod-141833' \
 --data-urlencode 'return_url=http://shop.merchant.com/payments/handleResponse' \
 --data-urlencode 'description=Sample description' \
---data-urlencode 'billing_address_first_name=Juspay' \
+--data-urlencode 'billing_address_first_name=HDFC' \
 --data-urlencode 'billing_address_last_name=Technologies' \
 --data-urlencode 'billing_address_line1=Girija Building' \
 --data-urlencode 'billing_address_line2=Ganapathi Temple Road' \
@@ -35,4 +34,4 @@ curl --location --request POST 'https://smartgateway.hdfcbank.com/orders' \
 --data-urlencode 'shipping_address_phone=9962881912' \
 --data-urlencode 'shipping_address_country_code_iso=IND' \
 --data-urlencode 'shipping_address_country=India' \
---data-urlencode 'metadata.JUSPAY:gateway_reference_id=payu_test' \
+--data-urlencode 'metadata.JUSPAY:gateway_reference_id=USD'
