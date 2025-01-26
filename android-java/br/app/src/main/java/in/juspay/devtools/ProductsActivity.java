@@ -31,13 +31,7 @@ public class ProductsActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
         //block:start:create-hyper-services-instance
-
-        /**
-         * TENANT_NAME : `juspayglobal` for business running outside india, otherwise `juspayindia`
-         * CLIENT_ID : client ID shared by Juspay for that specific tenant.
-         */
         hyperServiceHolder = new HyperServiceHolder(this, "<TENANT_NAME>", "<CLIENT_ID>");
-
         //block:end:create-hyper-services-instance
         initiatePaymentsSDK();
         proceedButton = findViewById(R.id.rectangle_8);
