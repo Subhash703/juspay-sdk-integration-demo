@@ -21,7 +21,7 @@
     // Initialize GlobalJuspayPaymentsServices
     // Creating an object of HyperServices class.
     // block:start:create-hyper-services-instance
-    self.hyperInstance = [[HyperServices alloc] initWithTenantId:"<tenant_name>" "<client_id>"];
+    self.hyperInstance = [[HyperServices alloc] initWithTenantId:"TENANT_NAME" clientId:"CLIENT_ID"];
     // block:end:create-hyper-services-instance
 }
 

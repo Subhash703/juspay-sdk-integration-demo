@@ -7,7 +7,6 @@ import UIKit
 
 // Importing GlobalJuspayPaymentsSDK
 // block:start:import-global-juspay-payments-sdk
-
 import HyperSDK
 // block:end:import-global-juspay-payments-sdk
 
@@ -17,7 +16,7 @@ class ViewController: UIViewController {
     // Create an instance of GlobalJuspayPaymentsServices
     // block:start:create-global-juspay-payments-services-instance
 
-    let hyperInstance = HyperServices(tenantId: HyperProperties.shared.customerConfig["tenant"] as! String, clientId: HyperProperties.shared.merchantData.clientId )
+    let hyperInstance = HyperServices(tenantId: "TENANT_NAME", clientId: "CLIENT_ID" )
     // block:end:create-global-juspay-payments-services-instance
 
     
@@ -115,11 +114,10 @@ class ViewController: UIViewController {
     @IBAction func initiatePayments(_ sender: Any) {
         // Calling initiate on hyperService instance to boot up payment engine.
         // block:start:initiate-sdk
-        
         self.hyperInstance.initiate(
             self,
             payload: createInitiatePayload(),
-            callback: globalJuspayCallbackHandler
+            callback: hyperCallbackHandler
         )
         // block:end:initiate-sdk
     }
@@ -129,7 +127,7 @@ class ViewController: UIViewController {
     // block:start:process-sdk-call
 
     if self.hyperInstance?.isInitialised() ?? false {
-     self.hyperInstance?.process(processPayload)               
+     self.hyperInstance?.process(processPayload)
     }
     // block:end:process-sdk-call
     
