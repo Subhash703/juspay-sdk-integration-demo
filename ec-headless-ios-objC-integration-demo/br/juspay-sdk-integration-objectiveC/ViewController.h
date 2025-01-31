@@ -4,7 +4,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <GlobalJuspayPaymentsSDK/GlobalJuspayPaymentsSDK.h> // Importing GlobalJuspayPaymentsSDK
+// Importing Hyper SDK
+// block:start:import-hyper-sdk
+
+#import <HyperSDK/HyperSDK.h>
+// block:end:import-hyper-sdk
 
 @interface ViewController : UIViewController
 
